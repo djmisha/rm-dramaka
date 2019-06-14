@@ -1,0 +1,348 @@
+
+
+.flexible-jump-links {
+	.jump-links-content {
+		margin-top: 0px;
+		margin-bottom: 40px;
+		@include media($desktop) {
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+	}
+	.jump-link-list {
+		width: 100%;
+	}
+	.jump-link-list ul {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0;
+		@include media($tablet) {
+			margin: 0 auto;
+		}
+		li {
+			text-align: center;
+			@include media($tablet) {
+				@include font(24px, .9em);
+				font-weight: 100;
+				border-right: 1px solid $darkColor;
+				padding-right: 10px;
+				padding-left: 10px;
+				margin-bottom: 30px;
+				&:last-of-type {
+					border-right: none;
+				}
+			}
+			&:before {
+				display: none;
+			}
+		}
+		a {
+			font-style: normal;
+			color: $darkColor;
+			text-decoration: none;
+			border-bottom: 2px solid transparent;
+			&:hover {
+				color: $primaryColor;
+				border-bottom: 2px solid $primaryColor;
+			}
+		}
+	}
+}
+
+.flexible-basic-content {
+	padding-top: 40px;
+	padding-bottom:20px;
+	@include media($desktop) {
+		padding-top: 100px;
+		padding-bottom: 80px;
+	}
+	// &.basic-faq {
+	// 	h2 {
+	// 		margin-top: 100px;
+	// 	}
+	// 	h3 {
+	// 		border-bottom: none !important;
+	// 		margin-bottom: 0;
+	// 	}
+	// }
+}
+
+.flexible-content-page {
+	h2 {
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	a.button {
+		&:hover {
+			color: $lightColor;
+		}
+	}
+}
+
+.flexible-multicolumn {
+	text-align: left;
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@include media($tablet) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	> div {
+		margin-bottom: 60px;
+		@include media($desktop) {
+			// padding-left: 40px;
+			// padding-right: 40px;
+			margin-bottom: 100px;
+		}
+		p {
+			margin: 0 auto;
+			max-width: 500px;
+		}
+	}
+	@include media($tablet) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	@include media($desktop) {
+		justify-content: space-around;
+		flex-wrap: nowrap;
+	}
+	// @include media(1300px) {
+	// }
+	h3 {
+		margin-top: 0;
+		margin-bottom: 20px;
+		padding-bottom: 0;
+		border-bottom: none;
+		text-align: center;
+		color: $primaryColor;
+		@include media($tablet) {
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+	ul {
+		list-style: none;
+		margin: 0 !important;
+		a {
+			width: 100%;
+			line-height: 18px;
+			&:hover {
+				color: $lightColor;
+			}
+		}
+	}
+}
+
+
+/*============================================================
+=            Flexible Styled and Featured Section            =
+============================================================*/
+
+.flexible-feature {
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@include media($tablet) {
+		padding-top: 120px;
+		padding-bottom: 150px;
+		background-size: cover;
+	}
+}
+
+
+/*=====================================
+=            Slpit Section            =
+=====================================*/
+.flexible-split-section {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	// border: 1px solid red;
+	// background-color: $tertiaryColor;
+	@include media($tablet) {
+		// align-items: center;
+		// flex-direction: column-reverse;
+	}
+	@include media($desktop) {
+		margin-top: 100px;
+		margin-bottom: 100px;
+		display: flex;
+		
+	}
+	> div {
+		width: 100%;
+		@include media($desktop) {
+			width: 50%;
+			height: 100%;
+		}
+	}
+	h2 {
+		// text-align: left;
+		@include media($tablet) {
+			margin-bottom: 40px;
+			
+		}
+	}
+	.with-bg {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 350px;
+		@include media($tablet) {
+			// min-height: 800px;
+		}
+		img {
+			width: 100%;
+			@include media($desktop) {
+				max-width: 800px;
+				box-shadow: 10px 10px 20px rgba( $darkColor, .4);
+			}
+		}
+	}
+	.with-content {
+		padding: 40px 20px;
+		p, ul, ol {
+			margin: 0 auto;
+			// max-width: 600px;
+		}
+		p {
+			margin-top: 1em;
+		}
+		ul, ol {
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+		@include media($tablet) {
+			padding: 50px 40px;
+			h2 {
+				padding-bottom: 50px;
+			}
+		}
+		@include media($desktop) {
+			padding: 50px 70px;
+		}
+		@include media($full) {
+			padding: 50px 100px;
+		}
+	}
+}
+
+
+/*====================================
+=            Flexible BNA            =
+====================================*/
+
+.flexible-bna {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: $secondaryAlt;
+	@include media($tablet) {
+		background-position: bottom center !important;
+		padding-top: 50px;
+		padding-bottom: 60px;
+	}
+	@include media($desktop) {
+	}
+	h2 {
+		max-width: 600px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.more {
+		margin: 0 auto;
+		margin-top: 20px;
+		@include media($tablet) {
+			margin-bottom: 50px;
+		}
+		a {
+			&:hover {
+				background: $primaryAlt;
+			}
+		}
+	}
+
+	.bnacase-imgset {
+		clear: both;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		text-align: left;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+
+		@include media($tablet) {
+			margin-bottom: 0;
+			width: 800px;
+		}
+
+		.before,
+		.after {
+			width: 48%;
+			margin-bottom: 10px;
+			img {
+				margin-bottom: 0px;
+			}
+
+			@include media($tablet) {
+				width: 48%;
+			}
+			span {
+				color: $primaryColor;
+				text-transform: uppercase;
+				font-family: $primaryFont;
+				font-size: 15px;
+				padding-left: 20px;
+				display: block;
+				padding-top: 10px;
+			}
+		}
+		.before {
+			margin-right: 10px;
+		}
+
+		div:last-of-type {
+			align-self: center;
+			a {
+				text-transform: none;
+				text-decoration: none;
+				color: $primaryColor;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+/*==============================================
+=            Flexible Contact Form             =
+==============================================*/
+
+.flexible-contact {
+	text-align: left;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@include media($desktop) {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+	h2, p {
+	}
+	p {
+		max-width: 820px;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,39 @@
+/* Naviagation bar */
+
+
+
+.nav-logo {
+	position: absolute;
+	width: auto;
+	padding-top: 10px;
+	padding-left: 10px;
+	@include media($desktop) {
+		width: 242px;
+	}
+	h1 {margin: 0 !important;}
+
+	img {
+		height: 100px;
+		@include media($desktop) {
+			height: auto;
+		}
+	}
+}
+
+ 
+
+
+
+
+
+/* Inside Page Headers */
+/* Inside Page Headers */
+/* Inside Page Headers */
+
+.int-header {
+	height: 60px;
+	@include media($desktop) {
+		height: 200px;
+	}
+}
+

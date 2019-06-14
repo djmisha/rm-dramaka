@@ -1,0 +1,94 @@
+aside {
+	display: block;
+	.from-blog & {
+		padding-bottom: 20px;
+	}
+	ul {
+		list-style: none;
+	}
+	li {
+		width: 100%;
+	}
+	@include media($desktop) {
+		width: 300px;
+		display: block;
+		> div {
+			width: 100%;
+		}
+	}
+}
+
+
+.sidebar-block {
+	margin-bottom: 30px;
+
+	.sb-heading {
+		font-weight: lighter;
+		font-family: $secondaryFont;
+		// font-size: 25px;
+		color: $darkColor;
+		margin-bottom: 20px;
+		padding-top: 5px;
+		text-align: left;
+		@include media($tablet) {
+			font-size: 35px;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+	ul {
+		background: $primaryColor;
+	}
+	li {
+		width: auto;
+		padding-right: 10px;
+		padding-left: 10px;
+		position: relative;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		@include media($tablet) {
+			padding-right: 15px;
+			padding-left: 15px;
+			&:first-of-type {
+				border-left: none;
+			}
+			&:last-of-type {
+
+			}
+			@include media($tablet) {
+				margin-bottom: 10px;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: $lightColor;
+			line-height: 1.5em;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&.current_page_item {
+			// Style this to differentiate (or remove);
+		}
+	}
+
+}
+
+.search-form form {
+	width: 100%;
+	display: flex;
+	margin-bottom: 40px;
+	height: 40px;
+	input {
+		border: 1px solid black;
+	}
+	.button {
+		color: $lightColor;
+		background: $primaryColor;
+		width: 100px;
+		padding: 0;
+		padding-left:20px;
+		padding-right:20px;
+	}
+}

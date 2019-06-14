@@ -1,0 +1,100 @@
+
+header,
+footer,
+.welcome-parallax,
+.home-doctor,
+// .home-featured-procedures
+{
+	// display: none !important;
+}
+
+
+
+/*===============================================
+=            Welcome to my Website!             =
+===============================================*/
+
+.welcome-parallax {
+	position: relative;
+	@include media($desktop) {
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+.welcome {
+	background: #fff url("images/bg-welcome.jpg") center center no-repeat;
+	background-size: cover;
+	z-index: 1000;
+	height: auto;
+	min-height: 480px;
+	@include media($tablet) {
+		// background: #fff url("images/bg-welcome.jpg") top center no-repeat;
+		height: 800px;
+		max-height: none;
+		padding-top: 0;
+	}
+	@include media($desktop) {
+		background: none;
+		height: 100vh;
+		min-height: 768px;
+	}
+}
+
+.welcome .welcome-cta {
+	color: $lightColor;
+	@include media($tablet) {
+		padding-top: 240px;
+		
+	}
+	@include media($desktop) {
+		padding-top: 400px;
+	}
+	h2 {
+	
+	}
+	h3 {
+		
+	}
+	.button {
+		background: $primaryColor;
+		color: $lightColor;
+		border-radius: 50px;
+		padding: 10px 20px;
+		margin-top: 50px;
+		&:hover {
+			background: $primaryAlt;
+			border: 2px solid $primaryAlt;
+		}
+	}
+}
+
+
+
+/*==================================
+=            home-about            =
+==================================*/
+
+.home-about {
+	text-align: left;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@include media($tablet) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		
+	}
+	h2 {
+		text-align: center;
+	}
+	a {
+		color: $darkColor;
+	} 
+	ul {
+		@include media($tablet) {
+			margin-left: 40px;
+		}
+	}
+
+}
+
